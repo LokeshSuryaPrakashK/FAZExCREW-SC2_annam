@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a *deep learning* solution for the **Soil Classification Challenge**, focusing on **binary classification** of images to determine if they depict *soil* or *not*. The script uses a pre-trained **EfficientNetB0** model with a custom classifier head, trained on a dataset of soil images. It handles multiple image formats (*jpg*, *jpeg*, *png*, *webp*, *gif*) and missing files, optimizing for the *F1-score*. The script uses **Markdown** formatting with special characters like `**` for **bold**, `*` for *italics*, and ``` for code blocks to ensure clarity on **GitHub**.
+This project implements a *deep learning* solution for the **Soil Classification Challenge**, focusing on **binary classification** of images to determine if they depict *soil* or *not*. The script uses a pre-trained **EfficientNetB0** model with a custom classifier head, trained on a dataset of soil images. It handles multiple image formats (*jpg*, *jpeg*, *png*, *webp*, *gif*) and missing files, optimizing for the *F1-score*.
 
 ## Features
 
@@ -11,7 +11,7 @@ This project implements a *deep learning* solution for the **Soil Classification
 - **File Handling**: Supports multiple image formats and logs missing files to `*missing_files.log*`.
 - **Training**: Trains with **AdamW** optimizer, `*cosine annealing scheduler*`, and *cross-entropy loss* for *2 epochs*.
 - **Evaluation**: Computes *macro F1-score*, generates a `*confusion matrix*` (*confusion_matrix.png*), and plots `*training history*` (*training_history.png*).
-- **Prediction**: Saves *binary predictions* for the test set in `*prakash_submission.csv*`.
+- **Prediction**: Saves *binary predictions* for the test set in `*submission.csv*`.
 
 ## Requirements
 
@@ -87,7 +87,7 @@ The script:
 ## Output Files
 
 The script generates, with `**` for emphasis:
-- **prakash_submission.csv**: *Binary predictions* for test set.
+- **submission.csv**: *Binary predictions* for test set.
 - **best_model.pth**: Best model weights based on *F1-score*.
 - **missing_files.log**: List of missing image files.
 - **confusion_matrix.png**: *Confusion matrix* visualization.
@@ -97,4 +97,3 @@ The script generates, with `**` for emphasis:
 
 - **Single Class Issue**: If only one class is present (e.g., *Class 1*), class balancing is disabled, limiting generalization (code warns: "Only one class found").
 - **Missing Files**: Handled with dummy images, which may affect performance.
-- **Short Training**: Only *2 epochs*, potentially insufficient for convergence.
